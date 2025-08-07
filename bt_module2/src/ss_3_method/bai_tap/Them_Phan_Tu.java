@@ -15,7 +15,7 @@ public class Them_Phan_Tu {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập giá trị X cần chèn: ");
-        int x = Integer.parseInt(scanner.nextLine();
+        int x = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Nhập vị trí index cần chèn: ");
         int index = Integer.parseInt(scanner.nextLine());
