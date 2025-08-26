@@ -1,4 +1,4 @@
-package ss_3_oop.bai_tap;
+package ss_4_oop.bai_tap;
 
 public class Phuong_Trinh_Bac_Hai {
     public class QuadraticEquation {

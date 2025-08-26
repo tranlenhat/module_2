@@ -1,15 +1,15 @@
 package ss_8_clear_code.entity;
 
-public class Customr {
+public class Customer {
     private int id;
     private String name;
     private String email;
     private String address;
 
-    public Customr() {
+    public Customer() {
     }
 
-    public Customr(int id, String name, String email, String address) {
+    public Customer(int id, String name, String email, String address) {
         this.id = id;
         this.name = name;
         this.email = email;

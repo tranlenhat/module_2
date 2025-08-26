@@ -17,7 +17,7 @@ public class MainController {
             switch (choice) {
                 case 1:
                     System.out.println("Chức năng quản lý khach hang");
-                    CustomrController.displayMenu();
+                    CustomerController.displayMenu();
                     break;
                 default:
                     System.out.println("Đã kết thúc chương trình");

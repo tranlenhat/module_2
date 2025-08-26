@@ -1,16 +1,15 @@
 package ss_8_clear_code.controller;
 
-import ss_8_clear_code.entity.Customr;
-import ss_8_clear_code.service.CustomrService;
-import ss_8_clear_code.service.ICustomrService;
-import ss_8_clear_code.view.CustomrView;
+import ss_8_clear_code.entity.Customer;
+import ss_8_clear_code.service.CustomerService;
+import ss_8_clear_code.service.ICustomerService;
+import ss_8_clear_code.view.CustomerView;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomrController {
-    private static ICustomrService customrService = new CustomrService();
+public class CustomerController {
+    private static ICustomerService customrService = new CustomerService();
     public static void displayMenu(){
         boolean flag = true;
         while (flag){
@@ -27,12 +26,12 @@ public class CustomrController {
             switch (choice) {
                 case 1:
                     System.out.println("Danh sách");
-                    List<Customr> customrList = customrService.findAll();
-                    CustomrView.displayCustomr(customrList);
+                    List<Customer> customrList = customrService.findAll();
+                    CustomerView.displayCustomr(customrList);
                     break;
                 case 2:
                     System.out.println("Thêm mới");
-                    Customr customr = CustomrView.inputDataForNewCustomr();
+                    Customer customr = CustomerView.inputDataForNewCustomr();
                     boolean isAddSuccess = customrService.add(customr);
                     if (isAddSuccess) {
                         System.out.println("Thêm mới thành công");
@@ -42,7 +41,7 @@ public class CustomrController {
                     break;
                 case 3:
                     System.out.println("Xoá");
-                    int delId = CustomrView.deleteDataForNewCustomr();
+                    int delId = CustomerView.deleteDataForNewCustomr();
                     boolean isDeleteSuccess = customrService.delete(delId);
                     if (isDeleteSuccess){
                         System.out.println("Da Xoa ID Thanh Cong");
@@ -52,12 +51,12 @@ public class CustomrController {
                     break;
                 case 4:
                     System.out.println("Tìm kiếm");
-                    int searchId = CustomrView.inputIdForSearch();
-                    Customr foud = customrService.search(searchId);
-                    if(foud != null){
-                        System.out.println("Khach hang tim thay " + foud);
+                    String name = CustomerView.inputIdForSearch();
+                    List<Customer> customerList = customrService.search(name);
+                    if(customerList.isEmpty()){
+                        CustomerView.displayCustomr(customerList);
                     }else {
-                        System.out.println("Khong tim thay khach hang"+foud);
+                        System.out.println("Khong tim thay khach hang");
                     }
                     break;
                 default:

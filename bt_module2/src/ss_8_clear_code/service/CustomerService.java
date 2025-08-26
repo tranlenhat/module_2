@@ -1,29 +1,28 @@
 package ss_8_clear_code.service;
 
-import ss_8_clear_code.entity.Customr;
-import ss_8_clear_code.resository.CustomrResository;
-import ss_8_clear_code.resository.ICustomrResository;
+import ss_8_clear_code.entity.Customer;
+import ss_8_clear_code.resository.CustomerRepository;
+import ss_8_clear_code.resository.ICustomerRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class CustomrService implements ICustomrService {
-    private ICustomrResository customrResository = new CustomrResository();
+public class CustomerService implements ICustomerService {
+    private ICustomerRepository customrResository = new CustomerRepository();
 
     @Override
-    public void addCustomr(Customr customr) {
+    public void addCustomr(Customer customr) {
 
     }
 
     @Override
-    public List<Customr> findAll() {
+    public List<Customer> findAll() {
         return customrResository.findAll();
     }
 
 
     @Override
-    public boolean add(Customr customr) {
-        List<Customr> customrs = customrResository.findAll();
+    public boolean add(Customer customr) {
+        List<Customer> customrs = customrResository.findAll();
         for (int i = 0; i < customrs.size(); i++) {
             if (customrs.get(i) != null) {
                 if (customrs.get(i).getId()==customr.getId()){
@@ -41,7 +40,9 @@ public class CustomrService implements ICustomrService {
     }
 
     @Override
-    public Customr search(int id) {
-        return customrResository.search(id);
+    public List <Customer> search(String name) {
+        return  customrResository.search(name);
     }
+
+
 }
