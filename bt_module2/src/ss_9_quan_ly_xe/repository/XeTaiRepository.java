@@ -1,6 +1,7 @@
 package ss_9_quan_ly_xe.repository;
 
 import ss_9_quan_ly_xe.entity.PhuongTien;
+import ss_9_quan_ly_xe.entity.XeMay;
 import ss_9_quan_ly_xe.entity.XeTai;
 
 import java.util.ArrayList;
@@ -21,6 +22,17 @@ public class XeTaiRepository implements IXeTaiRepository{
 
     @Override
     public boolean addXeTai(XeTai xeTai) {
+        return false;
+    }
+
+    @Override
+    public boolean deleteXeTai(int id) {
+        for (XeTai xeTai : xeTaiList){
+            if (xeTai.getId() == id){
+                xeTaiList.remove(xeTai);
+                return true;
+            }
+        }
         return false;
     }
 }

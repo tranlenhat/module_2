@@ -3,7 +3,6 @@ package ss_9_quan_ly_xe.controller;
 import ss_9_quan_ly_xe.entity.XeTai;
 import ss_9_quan_ly_xe.service.IXeTaiService;
 import ss_9_quan_ly_xe.service.XeTaiService;
-import ss_9_quan_ly_xe.view.XeMayView;
 import ss_9_quan_ly_xe.view.XeTaiView;
 
 import java.util.List;
@@ -44,6 +43,13 @@ public class QuanLyXeTaiController {
                     break;
                 case 3:
                     System.out.println("Xoá");
+                    int delID = XeTaiView.deleteXeTai();
+                    boolean flag4 = xeTaiService.deleteXeTai(delID);
+                    if (flag4){
+                        System.out.println("Xóa ID thành công...");
+                    }else {
+                        System.out.println("Không tìm thây ID");
+                    }
                     break;
                 case 4:
                     System.out.println("Tìm kiếm");

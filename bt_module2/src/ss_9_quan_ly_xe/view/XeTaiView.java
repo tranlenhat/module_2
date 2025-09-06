@@ -40,4 +40,9 @@ public class XeTaiView {
         XeTai xeTai = new XeTai(id,bienKiemSoat,tenHangSX,namSX,chuSoHuu,trongTai);
         return xeTai;
     }
+    public static int deleteXeTai(){
+        System.out.println("Nhập ID cần xóa");
+        int delID = Integer.parseInt(scanner.nextLine());
+        return delID;
+    }
 }

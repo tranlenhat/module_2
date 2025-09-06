@@ -44,6 +44,13 @@ public class QuanLyXeMayController {
                     break;
                 case 3:
                     System.out.println("Xoá");
+                    int delID = XeMayView.deleteXeMay();
+                    boolean flag3 = xeMayService.deleteXeMay(delID);
+                    if(flag3){
+                        System.out.println("Xóa ID thành công");
+                    }else {
+                        System.out.println("Không tìm thấy ID");
+                    }
                     break;
                 case 4:
                     System.out.println("Tìm kiếm");

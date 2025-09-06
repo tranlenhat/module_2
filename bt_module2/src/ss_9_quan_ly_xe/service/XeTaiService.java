@@ -27,4 +27,9 @@ public class XeTaiService implements IXeTaiService{
         }
         return xeTaiRepository.addXeTai(xeTai);
     }
+
+    @Override
+    public boolean deleteXeTai(int id) {
+        return xeTaiRepository.deleteXeTai(id);
+    }
 }

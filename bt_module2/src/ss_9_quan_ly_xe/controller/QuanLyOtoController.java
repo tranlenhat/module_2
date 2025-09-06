@@ -1,5 +1,6 @@
 package ss_9_quan_ly_xe.controller;
 
+import ss_8_clear_code.view.CustomerView;
 import ss_9_quan_ly_xe.entity.Oto;
 import ss_9_quan_ly_xe.service.IOtoService;
 import ss_9_quan_ly_xe.service.OtoService;
@@ -43,6 +44,13 @@ public class QuanLyOtoController {
                     break;
                 case 3:
                     System.out.println("Xoá");
+                    int delID = OtoView.deleteOto();
+                    boolean isDeleteSuccess = otoService.deleteOto(delID);
+                    if (isDeleteSuccess){
+                        System.out.println("Xóa ID thành công...");
+                    }else {
+                        System.out.println("Không Tìm Thấy ID...");
+                    }
                     break;
                 case 4:
                     System.out.println("Tìm kiếm");

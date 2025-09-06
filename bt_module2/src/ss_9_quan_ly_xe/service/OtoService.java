@@ -26,4 +26,9 @@ public class OtoService implements IOtoService{
         }
         return otoRepository.addOto(oto);
     }
+
+    @Override
+    public boolean deleteOto(int id) {
+        return otoRepository.deleteOto(id);
+    }
 }

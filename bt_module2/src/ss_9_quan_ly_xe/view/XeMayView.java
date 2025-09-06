@@ -1,7 +1,4 @@
 package ss_9_quan_ly_xe.view;
-
-import ss_9_quan_ly_xe.entity.Oto;
-import ss_9_quan_ly_xe.entity.PhuongTien;
 import ss_9_quan_ly_xe.entity.XeMay;
 
 import java.util.List;
@@ -39,5 +36,10 @@ public class XeMayView {
 
         XeMay xeMay = new XeMay(id,bienKiemSoat,tenHangSX,namSX,chuSoHuu,congSuat);
         return xeMay;
+    }
+    public static int deleteXeMay(){
+        System.out.println("Nhập ID cần xóa");
+        int delID = Integer.parseInt(scanner.nextLine());
+        return delID;
     }
 }

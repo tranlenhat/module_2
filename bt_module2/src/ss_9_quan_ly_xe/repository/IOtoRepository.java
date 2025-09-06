@@ -8,4 +8,5 @@ import java.util.List;
 public interface IOtoRepository {
     List<Oto> findOto();
     boolean addOto(Oto oto);
+    boolean deleteOto(int id);
 }

@@ -23,4 +23,15 @@ public class XeMayRepository implements IXeMayRepository{
         xeMaysList.add(xeMay);
         return true;
     }
+
+    @Override
+    public boolean deleteXeMay(int id) {
+        for (XeMay xeMay : xeMaysList){
+            if (xeMay.getId() == id){
+                xeMaysList.remove(xeMay);
+                return true;
+            }
+        }
+        return false;
+    }
 }

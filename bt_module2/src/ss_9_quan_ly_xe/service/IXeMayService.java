@@ -8,4 +8,5 @@ import java.util.List;
 public interface IXeMayService {
     List<XeMay> findAllXeMay();
     boolean addXeMay(XeMay xeMay);
+    boolean deleteXeMay(int id);
 }

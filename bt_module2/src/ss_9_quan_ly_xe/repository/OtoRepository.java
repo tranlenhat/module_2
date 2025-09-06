@@ -23,4 +23,15 @@ public class OtoRepository implements IOtoRepository{
         otosList.add(oto);
         return true;
     }
+
+    @Override
+    public boolean deleteOto(int id) {
+        for (Oto oto : otosList){
+            if (oto.getId() == id){
+                otosList.remove(oto);
+                return true;
+            }
+        }
+        return false;
+    }
 }

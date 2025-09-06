@@ -42,4 +42,9 @@ public class OtoView {
         Oto oto = new Oto(id,bienKiemSoat,tenHangSX,namSX,chuSoHuu,soChoNgoi,kieuXe);
         return oto;
     }
+    public static int deleteOto(){
+        System.out.println("Nhập ID muốn xóa");
+        int delID = Integer.parseInt(scanner.nextLine());
+        return delID;
+    }
 }

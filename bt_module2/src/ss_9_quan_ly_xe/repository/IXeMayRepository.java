@@ -8,4 +8,5 @@ import java.util.List;
 public interface IXeMayRepository {
     List<XeMay> finAllXeMay();
     boolean addXeMay(XeMay xeMay);
+    boolean deleteXeMay(int id);
 }

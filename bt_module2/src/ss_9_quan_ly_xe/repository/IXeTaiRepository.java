@@ -8,4 +8,5 @@ import java.util.List;
 public interface IXeTaiRepository {
     List<XeTai> finaAllXeTai();
     boolean addXeTai(XeTai xeTai);
+    boolean deleteXeTai(int id);
 }

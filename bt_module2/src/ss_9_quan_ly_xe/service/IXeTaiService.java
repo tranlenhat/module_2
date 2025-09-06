@@ -7,4 +7,5 @@ import java.util.List;
 public interface IXeTaiService {
     List<XeTai> findXeTai();
     boolean addXeTai(XeTai xeTai);
+    boolean deleteXeTai(int id);
 }

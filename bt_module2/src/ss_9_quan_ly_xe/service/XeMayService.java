@@ -27,4 +27,9 @@ public class XeMayService implements IXeMayService{
         }
         return xeMayRepository.addXeMay(xeMay);
     }
+
+    @Override
+    public boolean deleteXeMay(int id) {
+        return xeMayRepository.deleteXeMay(id);
+    }
 }
