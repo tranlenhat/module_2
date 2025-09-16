@@ -58,6 +58,7 @@ public abstract class PhuongTien {
         this.chuSoHuu = chuSoHuu;
     }
 
+
     @Override
     public String toString() {
         return "PhuongTien{" +
