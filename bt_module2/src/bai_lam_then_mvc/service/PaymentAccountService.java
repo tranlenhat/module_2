@@ -6,7 +6,7 @@ import bai_lam_then_mvc.repository.PaymentAccountRepository;
 
 import java.util.List;
 
-public class PaymentAccountService implements IPaymentAccountService {
+public class PaymentAccountService implements IPaymentAccountService  {
     private IPaymentAccountRepository paymentAccountRepository = new PaymentAccountRepository();
     @Override
     public List<PaymentAccount> getAll() {
