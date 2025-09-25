@@ -2,13 +2,13 @@ package casestudy_furama_resort.entity;
 
 public abstract class Person {
     private String hoTen;
-    private int ngaySinh;
+    private String ngaySinh;
     private String gioiTinh;
-    private int soCmnd;
-    private int soDt;
+    private String soCmnd;
+    private String soDt;
     private String email;
 
-    public Person(String hoTen, int ngaySinh, String gioiTinh, int soCmnd, int soDt, String email) {
+    public Person(String hoTen, String ngaySinh, String gioiTinh, String soCmnd, String soDt, String email) {
         this.hoTen = hoTen;
         this.ngaySinh = ngaySinh;
         this.gioiTinh = gioiTinh;
@@ -25,11 +25,11 @@ public abstract class Person {
         this.hoTen = hoTen;
     }
 
-    public int getNgaySinh() {
+    public String getNgaySinh() {
         return ngaySinh;
     }
 
-    public void setNgaySinh(int ngaySinh) {
+    public void setNgaySinh(String ngaySinh) {
         this.ngaySinh = ngaySinh;
     }
 
@@ -41,19 +41,19 @@ public abstract class Person {
         this.gioiTinh = gioiTinh;
     }
 
-    public int getSoCmnd() {
+    public String getSoCmnd() {
         return soCmnd;
     }
 
-    public void setSoCmnd(int soCmnd) {
+    public void setSoCmnd(String soCmnd) {
         this.soCmnd = soCmnd;
     }
 
-    public int getSoDt() {
+    public String getSoDt() {
         return soDt;
     }
 
-    public void setSoDt(int soDt) {
+    public void setSoDt(String soDt) {
         this.soDt = soDt;
     }
 

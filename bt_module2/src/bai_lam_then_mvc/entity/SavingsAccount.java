@@ -16,7 +16,7 @@ public class SavingsAccount extends BankAccount{
 
     @Override
     public String getInfoToCSV() {
-        return this.getId()+","+this.getMaTk()+","+this.getTenChuTk()+","+this.getNgayTaoTk()+","+this.soTienGuiTk+","+this.ngayGuiTk+","+this.laiSuat+","+this.kyHan+",";
+        return this.getId()+","+this.getMaTk()+","+this.getTenChuTk()+","+this.getNgayTaoTk()+","+this.soTienGuiTk+","+this.ngayGuiTk+","+this.laiSuat+","+this.kyHan;
     }
 
     @Override

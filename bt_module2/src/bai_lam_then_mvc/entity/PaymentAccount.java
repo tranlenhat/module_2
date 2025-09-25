@@ -10,7 +10,7 @@ public class PaymentAccount extends BankAccount {
 
     @Override
     public String getInfoToCSV() {
-        return this.getId()+","+this.getMaTk()+","+this.getTenChuTk()+","+this.getNgayTaoTk()+","+this.soThe+","+this.soTienTrongThe+",";
+        return this.getId()+","+this.getMaTk()+","+this.getTenChuTk()+","+this.getNgayTaoTk()+","+this.soThe+","+this.soTienTrongThe;
     }
     public PaymentAccount(int id, int maTk, String tenChuTk, String ngayTaoTk, int soThe, int soTienTrongThe) {
         super(id, maTk, tenChuTk, ngayTaoTk);

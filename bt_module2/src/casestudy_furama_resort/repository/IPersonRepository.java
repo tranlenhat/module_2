@@ -5,5 +5,5 @@ import java.util.List;
 public interface IPersonRepository<T> {
     List<T> getAll();
     boolean add(T t);
-    boolean delete(T t);
+    boolean edit(T t);
 }

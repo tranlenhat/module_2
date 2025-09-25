@@ -6,12 +6,12 @@ public class FuramaResort {
     private int dienTich;
     private int chiPhiThue;
     private int soLuongNguoi;
-    private int kieuThue;
+    private String kieuThue;
 
     public FuramaResort() {
     }
 
-    public FuramaResort(int maDv, String tenDv, int dienTich, int chiPhiThue, int soLuongNguoi, int kieuThue) {
+    public FuramaResort(int maDv, String tenDv, int dienTich, int chiPhiThue, int soLuongNguoi, String kieuThue) {
         this.maDv = maDv;
         this.tenDv = tenDv;
         this.dienTich = dienTich;
@@ -60,11 +60,11 @@ public class FuramaResort {
         this.soLuongNguoi = soLuongNguoi;
     }
 
-    public int getKieuThue() {
+    public String getKieuThue() {
         return kieuThue;
     }
 
-    public void setKieuThue(int kieuThue) {
+    public void setKieuThue(String kieuThue) {
         this.kieuThue = kieuThue;
     }
 

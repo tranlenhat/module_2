@@ -1,11 +1,11 @@
 package casestudy_furama_resort.entity;
 
 public class Customer extends Person{
-    private int maKh;
+    private String maKh;
     private String loaiKhach;
     private String diaChi;
 
-    public Customer(String hoTen, int ngaySinh, String gioiTinh, int soCmnd, int soDt, String email, int maKh, String loaiKhach, String diaChi) {
+    public Customer(String hoTen, String ngaySinh, String gioiTinh, String soCmnd, String soDt, String email, String maKh, String loaiKhach, String diaChi) {
         super(hoTen, ngaySinh, gioiTinh, soCmnd, soDt, email);
         this.maKh = maKh;
         this.loaiKhach = loaiKhach;
@@ -13,15 +13,23 @@ public class Customer extends Person{
     }
     @Override
     public String getInFoToCSV() {
-        return this.getHoTen()+","+ this.getNgaySinh()+","+this.getGioiTinh()+","+this.getSoCmnd()+","+this.getSoDt()+","+this.getEmail()+","+this.maKh+","+this.loaiKhach+","+this.diaChi+",";
+        return getHoTen() + "," +
+                getNgaySinh() + "," +
+                getGioiTinh() + "," +
+                getSoCmnd() + "," +
+                getSoDt() + "," +
+                getEmail() + "," +
+                maKh + "," +
+                loaiKhach + "," +
+                diaChi;
     }
 
 
-    public int getMaKh() {
+    public String getMaKh() {
         return maKh;
     }
 
-    public void setMaKh(int maKh) {
+    public void setMaKh(String maKh) {
         this.maKh = maKh;
     }
 
@@ -46,7 +54,7 @@ public class Customer extends Person{
     @Override
     public String toString() {
         return "Customer{" +
-                toString() +
+                super.toString() +
                 "maKh=" + maKh +
                 ", loaiKhach='" + loaiKhach + '\'' +
                 ", diaChi='" + diaChi + '\'' +

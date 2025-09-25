@@ -2,13 +2,12 @@ package casestudy_furama_resort.entity;
 
 public class Employee extends Person {
 
-
-    private int maNv;
+    private String maNv;
     private String trinhDo;
     private String viTri;
     private double luong;
 
-    public Employee(String hoTen, int ngaySinh, String gioiTinh, int soCmnd, int soDt, String email, int maNv, String trinhDo, String viTri, double luong) {
+    public Employee(String hoTen, String ngaySinh, String gioiTinh, String soCmnd, String soDt, String email, String maNv, String trinhDo, String viTri, double luong) {
         super(hoTen, ngaySinh, gioiTinh, soCmnd, soDt, email);
         this.maNv = maNv;
         this.trinhDo = trinhDo;
@@ -17,14 +16,16 @@ public class Employee extends Person {
     }
     @Override
     public String getInFoToCSV() {
-        return this.getHoTen()+","+ this.getNgaySinh()+","+this.getGioiTinh()+","+this.getSoCmnd()+","+this.getSoDt()+","+this.getEmail()+","+this.maNv+","+this.trinhDo+","+this.viTri+","+this.luong;
+        return getHoTen() + "," + getNgaySinh() + "," + getGioiTinh() + "," + getSoCmnd() + "," + getSoDt() + "," +
+                getEmail() + "," + maNv + "," + trinhDo + "," + viTri + "," + luong;
     }
 
-    public int getMaNv() {
+
+    public String getMaNv() {
         return maNv;
     }
 
-    public void setMaNv(int maNv) {
+    public void setMaNv(String maNv) {
         this.maNv = maNv;
     }
 
@@ -56,7 +57,7 @@ public class Employee extends Person {
     @Override
     public String toString() {
         return "Employee{" +
-                toString() +
+                super.toString() +
                 "maNv=" + maNv +
                 ", trinhDo='" + trinhDo + '\'' +
                 ", viTri='" + viTri + '\'' +

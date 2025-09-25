@@ -6,7 +6,7 @@ public class RoomResort extends FuramaResort{
     public RoomResort() {
     }
 
-    public RoomResort(int maDv, String tenDv, int dienTich, int chiPhiThue, int soLuongNguoi, int kieuThue, String dichVuMienPhi) {
+    public RoomResort(int maDv, String tenDv, int dienTich, int chiPhiThue, int soLuongNguoi, String kieuThue, String dichVuMienPhi) {
         super(maDv, tenDv, dienTich, chiPhiThue, soLuongNguoi, kieuThue);
         this.dichVuMienPhi = dichVuMienPhi;
     }

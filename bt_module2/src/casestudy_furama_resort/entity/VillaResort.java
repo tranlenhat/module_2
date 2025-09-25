@@ -8,7 +8,7 @@ public class VillaResort extends FuramaResort{
     public VillaResort() {
     }
 
-    public VillaResort(int maDv, String tenDv, int dienTich, int chiPhiThue, int soLuongNguoi, int kieuThue, String tieuChuanPhong, int dienTichHoBoi, int soTang) {
+    public VillaResort(int maDv, String tenDv, int dienTich, int chiPhiThue, int soLuongNguoi, String kieuThue, String tieuChuanPhong, int dienTichHoBoi, int soTang) {
         super(maDv, tenDv, dienTich, chiPhiThue, soLuongNguoi, kieuThue);
         this.tieuChuanPhong = tieuChuanPhong;
         this.dienTichHoBoi = dienTichHoBoi;

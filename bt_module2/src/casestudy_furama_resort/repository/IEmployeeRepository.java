@@ -1,4 +1,6 @@
 package casestudy_furama_resort.repository;
 
-public interface IEmployeeRepository extends IPersonRepository{
+import casestudy_furama_resort.entity.Employee;
+
+public interface IEmployeeRepository extends IPersonRepository<Employee>{
 }

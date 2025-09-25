@@ -1,9 +1,20 @@
 package casestudy_furama_resort.controller;
 
+import casestudy_furama_resort.entity.Customer;
+import casestudy_furama_resort.entity.Employee;
+import casestudy_furama_resort.service.CustomerService;
+import casestudy_furama_resort.service.EmployeeService;
+import casestudy_furama_resort.service.ICustomerService;
+import casestudy_furama_resort.service.IEmployeeService;
+import casestudy_furama_resort.view.CustomerView;
+import casestudy_furama_resort.view.EmployeeView;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeController {
     public static void displayMenu(){
+        IEmployeeService employeeService = new EmployeeService();
         boolean flag = true;
         while (flag){
             System.out.println("<--------------------> Employee Management <------------------------->");
@@ -18,9 +29,18 @@ public class EmployeeController {
             switch (choice) {
                 case 1:
                     System.out.println("Display list employees");
+                    List<Employee> employeeList = employeeService.getAll();
+                    EmployeeView.displayList(employeeList);
                     break;
                 case 2:
                     System.out.println("Add new employee");
+                    Employee employee = EmployeeView.inputDataEmployee();
+                    boolean isAddSuccess = employeeService.add(employee);
+                    if(isAddSuccess){
+                        System.out.println("Thêm mới thành công...");
+                    }else {
+                        System.out.println("Thêm mới thất bại!!!");
+                    }
                     break;
                 case 3:
                     System.out.println("Edit employee");
